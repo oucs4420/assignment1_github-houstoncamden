@@ -14,5 +14,26 @@ int main( int argc, char* argv[] )
     for (int arg = 0; arg < argc; ++arg)
             std::cout << "argv[" << arg << "]: " << argv[arg] << '\n' ;
 
+
+
+    for(int i = 1; i < argc; i++){
+    ifstream ifs;
+
+    ifs.open(argv[i]);
+
+
+    string line;
+    int numlines = 0;
+
+        while(getline(ifs,line)){
+            numlines++;
+        }
+
+    cout << numlines<<endl;
+    //return numlines;
+    }
+
+
+
     exit(0); // this means that the program executed correctly!
 }
